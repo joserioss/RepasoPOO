@@ -41,5 +41,23 @@ public class Fecha {
 	public void setAnio(String anio) {
 		this.anio = anio;
 	}
+	
+    // Sobrescrito
+    public String toString() {
+        String retorno = String.format("Fecha: %s-%s-%s", dia, mes, anio);
+        return retorno;
+    }
+    // sobrescrito
+    public int hashCode() {
+        return dia.hashCode();
+    }
+    // Sobrescrito
+    public boolean equals(Object obj) {
+        String este = this.toString();
+        String ese = "";
+        if(obj != null)
+            ese = obj.toString();
+        return este.equals(ese);
+    }
 		
 }

@@ -1,13 +1,21 @@
 package cl.jrios.poo;
 
+import java.text.DecimalFormat;
+
 public class Principal {
 
 	public static void main(String[] args) {
-		Fecha fecha1 = new Fecha();
-		Fecha fecha2 = new Fecha("8","06", "2020");
+		Vehiculo auto1 = new Vehiculo("A239012", "NISSan", "5", "2018", 7344321);
+		Vehiculo auto2 = new Vehiculo("A2dasdq2", "Nissan", "5", "2018", 5312111);
+		Vehiculo auto3 = new Vehiculo("Cek23AD", "Tesla", "4", "2020", 12564323);
+		Vehiculo auto4 = new Vehiculo("A2dasdq2", "Nissan", "5", "2018", 5312111);
 		
-		fecha1.setDia("8");
-		System.out.printf("%s-%s-%s \n", fecha1.getDia(), fecha1.getMes(), fecha1.getAnio());
-		System.out.printf("%s-%s-%s \n", fecha2.getDia(), fecha2.getMes(), fecha2.getAnio());
-	}
+		System.out.println(auto1.toString());
+		
+		System.out.println(auto1.equals(auto3));
+		
+		
+		System.out.println();
+		
+		}
 }
