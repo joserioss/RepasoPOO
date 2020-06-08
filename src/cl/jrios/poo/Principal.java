@@ -1,21 +1,25 @@
 package cl.jrios.poo;
 
-import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Principal {
 
 	public static void main(String[] args) {
-		Vehiculo auto1 = new Vehiculo("A239012", "NISSan", "5", "2018", 7344321);
-		Vehiculo auto2 = new Vehiculo("A2dasdq2", "Nissan", "5", "2018", 5312111);
-		Vehiculo auto3 = new Vehiculo("Cek23AD", "Tesla", "4", "2020", 12564323);
-		Vehiculo auto4 = new Vehiculo("A2dasdq2", "Nissan", "5", "2018", 5312111);
+		int arreglo[] = {13,23,24};
+		List<Integer> lista = new ArrayList<>();
 		
-		System.out.println(auto1.toString());
+		lista.add(12);
+		lista.add(13);
+		lista.add(10);
+		lista.add(10);
 		
-		System.out.println(auto1.equals(auto3));
+		Sumador suma = new Sumador();
 		
-		
-		System.out.println();
+		System.out.println(suma.aplicar(24,12,14,34));
+		System.out.println(suma.aplicar("34","12","14"));
+		System.out.println(suma.aplicar(arreglo));
+		System.out.println(suma.aplicar(lista));
 		
 		}
 }
